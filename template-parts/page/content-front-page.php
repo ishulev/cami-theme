@@ -9,15 +9,18 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
+<article id="post-<?php the_ID(); ?>">
 
 	<?php
 	if ( has_post_thumbnail() ) :
-
-		// Calculate aspect ratio: h / w * 100%.
 		?>
+		<div class="hvrbox">
+			<img src="<?php the_post_thumbnail_url() ?>" class="img-fluid hvrbox-layer_bottom" alt="">
+			<div class="hvrbox-layer_top">
+				<div class="hvrbox-text"><?php the_title( '<h2 class="entry-title">', '</h2>' ); ?></div>
+			</div>
+		</div>
 
-		
 	<?php endif; ?>
 
 	<div class="panel-content">
