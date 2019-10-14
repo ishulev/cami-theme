@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site container">
-	<a class="skip-link hidden screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cami' ); ?></a>
+	<a hidden class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cami' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
