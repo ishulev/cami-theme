@@ -15,7 +15,7 @@
 
 	<footer class="row align-items-center">
 		<div class="col">&copy;2019 creativebear.space</div>
-		<div class="col text-right"><h3>A playground for bears <br>to try different technologies and designs</h3></div>
+		<div class="col text-right"><h3>A playground for bears <br>to try different technologies and designs.</h3></div>
 	</footer>
 </div><!-- #page -->
 
