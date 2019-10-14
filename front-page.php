@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The front page template file
  *
@@ -16,67 +17,73 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-	<?php
+		<?php
 		// Get the ID of a given category
-		$category_id = get_cat_ID( 'Playground' );
+		$category_id = get_cat_ID('Playground');
 
 		// Get the URL of this category
-		$category_link = get_category_link( $category_id );
-	?>
+		$category_link = get_category_link($category_id);
+		?>
 
-<!-- Print a link to this category -->
-<h2><a href="<?php echo esc_url( $category_link ); ?>" title="Playground">Playground</a></h2>
+		<!-- Print a link to this category -->
+		<div class="row align-items-center">
+			<h2 class="mr-3">Playground</h2>
+			<a  href="<?php echo esc_url($category_link); ?>" title="Playground">View all</a>
+		</div>
 		<?php
 		// Show the selected front page content.
-		query_posts( array(
+		query_posts(array(
 			'category_name'  => 'playground',
 			'posts_per_page' => 3
-		) ); 
-		if ( have_posts() ) : ?>
+		));
+		if (have_posts()) : ?>
 			<div class="row">
-				<?php while ( have_posts() ) : ?>
+				<?php while (have_posts()) : ?>
 					<div class="col">
 						<?php
-							the_post();
-							get_template_part( 'template-parts/page/content', 'front-page' );
-						?>
+								the_post();
+								get_template_part('template-parts/page/content', 'front-page');
+								?>
 					</div>
 				<?php endwhile; ?>
 			</div>
 		<?php else :
-			get_template_part( 'template-parts/post/content', 'none' );
+			get_template_part('template-parts/post/content', 'none');
 		endif;
 		?>
 
-<?php
+		<?php
 		// Get the ID of a given category
-		$category_id = get_cat_ID( 'Insights' );
+		$category_id = get_cat_ID('Insights');
 
 		// Get the URL of this category
-		$category_link = get_category_link( $category_id );
-	?>
+		$category_link = get_category_link($category_id);
+		?>
 
-<!-- Print a link to this category -->
-<h2><a href="<?php echo esc_url( $category_link ); ?>" title="Insights">Insights</a></h2>
+		<!-- Print a link to this category -->
+		<div class="row align-items-center">
+			<h2 class="mr-3">Insights</h2>
+			<a  href="<?php echo esc_url($category_link); ?>" title="Insights">View all</a>
+		</div>
 		<?php
 		// Show the selected front page content.
-		query_posts( array(
+		query_posts(array(
 			'category_name'  => 'insights',
 			'posts_per_page' => 3
-		) ); 
-		if ( have_posts() ) : ?>
+		));
+		if (have_posts()) : ?>
 			<div class="row">
-				<?php while ( have_posts() ) : ?>
+				<?php while (have_posts()) : ?>
 					<div class="col">
 						<?php
-							the_post();
-							get_template_part( 'template-parts/page/content', 'front-page' );
-						?>
+								the_post();
+								get_template_part('template-parts/page/content', 'front-page');
+								?>
 					</div>
 				<?php endwhile; ?>
 			</div>
 		<?php else :
-			get_template_part( 'template-parts/post/content', 'none' );
+			get_template_part('template-parts/post/content', 'none');
 		endif;
 		?>
 
