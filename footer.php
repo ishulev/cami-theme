@@ -13,21 +13,10 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cami' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cami' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cami' ), 'cami', '<a href="http://creativebear.space">Ivan Shulev</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer class="row align-items-center">
+		<div class="col">&copy;2019 creativebear.space</div>
+		<div class="col text-right"><h3>A playground for bears <br>to try different technologies and designs</h3></div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
