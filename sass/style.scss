@@ -115,3 +115,9 @@ body {
 .hvrbox.active .hvrbox-text_mobile {
 	display: block;
 }
+
+.navbar-nav {
+		.nav-item:not(.active) a {
+		text-decoration: none;
+	}
+}
