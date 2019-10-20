@@ -1,18 +1,28 @@
-( function( wp ) {
+
+(function (wp) {
     var registerPlugin = wp.plugins.registerPlugin;
     var PluginSidebar = wp.editPost.PluginSidebar;
     var el = wp.element.createElement;
- 
-    registerPlugin( 'my-plugin-sidebar', {
-        render: function() {
-            return el( PluginSidebar,
+    var Text = wp.components.TextControl;
+    registerPlugin('my-plugin-sidebar', {
+        render: function () {
+            return el(PluginSidebar,
                 {
                     name: 'my-plugin-sidebar',
                     icon: 'admin-post',
                     title: 'My plugin sidebar',
                 },
-                'Meta field'
+                el( 'div',
+                    { className: 'plugin-sidebar-content' },
+                    el( Text, {
+                        label: 'Meta Block Field',
+                        value: 'Initial value',
+                        onChange: function( content ) {
+                            console.log( 'content changed to ', content );
+                        },
+                    } )
+                )
             );
         },
-    } );
-} )( window.wp );
+    });
+})(window.wp);
