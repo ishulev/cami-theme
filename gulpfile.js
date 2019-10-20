@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var babel = require('gulp-babel');
 
 sass.compiler = require('node-sass');
 
@@ -11,8 +12,20 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('js', function () {
+    return gulp.src('js/plugin.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('js/dist'))
+});
+
 gulp.task('sass:watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'sass:watch']);
+gulp.task('js:watch', function () {
+    gulp.watch('./js/plugin.js', ['js']);
+});
+
+gulp.task('default', ['sass', 'js', 'sass:watch', 'js:watch']);
