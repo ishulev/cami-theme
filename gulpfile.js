@@ -15,8 +15,12 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     return gulp.src('js/plugin.js')
         .pipe(babel({
-            presets: ['@babel/env']
+            presets: ['@babel/preset-react']
         }))
+        .on('error', function (e) {
+            console.error(e);
+            // this.emit('end');
+        })
         .pipe(gulp.dest('js/dist'))
 });
 
