@@ -15,7 +15,8 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     return gulp.src('js/plugin.js')
         .pipe(babel({
-            presets: ['@babel/preset-react']
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-transform-modules-commonjs']
         }))
         .on('error', function (e) {
             console.error(e);
