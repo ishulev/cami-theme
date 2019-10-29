@@ -12,6 +12,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@wordpress/components": "^8.3.2",
+    "@wordpress/compose": "^3.7.2",
+    "@wordpress/data": "^4.9.2",
+    "@wordpress/edit-post": "^3.8.4",
+    "@wordpress/element": "^2.8.2",
+    "@wordpress/i18n": "^3.6.1",
     "@wordpress/scripts": "^5.1.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
