@@ -202,7 +202,8 @@ function sidebar_plugin_register()
 			'wp-edit-post',
 			'wp-element',
 			'wp-components',
-			'wp-data'
+			'wp-data',
+			'wp-polyfill'
 		)
 	);
 }
