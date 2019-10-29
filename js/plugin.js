@@ -55,7 +55,7 @@ registerPlugin('my-plugin-sidebar', {
     return el(PluginSidebar,
       {
         name: 'my-plugin-sidebar',
-        icon: 'admin-post',
+        icon: 'buddicons-topics',
         title: 'My plugin sidebar',
       },
       el('div',

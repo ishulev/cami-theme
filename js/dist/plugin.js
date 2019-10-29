@@ -152,7 +152,7 @@ registerPlugin('my-plugin-sidebar', {
   render: function render() {
     return el(PluginSidebar, {
       name: 'my-plugin-sidebar',
-      icon: 'admin-post',
+      icon: 'buddicons-topics',
       title: 'My plugin sidebar'
     }, el('div', {
       className: 'plugin-sidebar-content'
