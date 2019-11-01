@@ -203,7 +203,7 @@ function sidebar_plugin_register()
 			'wp-element',
 			'wp-components',
 			'wp-data',
-			'wp-polyfill'
+			'wp-polyfill',
 		)
 	);
 }
@@ -217,6 +217,6 @@ add_action('enqueue_block_editor_assets', 'sidebar_plugin_script_enqueue');
 
 register_post_meta('post', 'sidebar_plugin_meta_block_field', array(
 	'show_in_rest' => true,
-	'single' => true,
 	'type' => 'string',
+	'single' => false
 ));
