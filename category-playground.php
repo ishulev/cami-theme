@@ -13,7 +13,7 @@ get_header();
 
 <main id="main" class="site-main">
     <?php query_posts(array(
-        'category_name'  => 'design-playground',
+        'category_name'  => 'playground',
         'posts_per_page' => 2
     )); ?>
     <?php if (have_posts()) : ?>
