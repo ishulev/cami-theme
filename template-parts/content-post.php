@@ -14,18 +14,40 @@
 	<header class="entry-header">
 		<h1><?php $associatedMedia = get_post_meta(get_the_ID(), 'sidebar_plugin_meta_block_field');
 			print_r($associatedMedia); ?></h1>
-		<?php foreach ($associatedMedia as $med) {
-			echo wp_get_attachment_image_src($med)[0];
-		} ?>
 
-		<?php if ( is_singular() ) :
-		the_title( '<h1 class="entry-title">', '</h1>' );
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<?php foreach ($associatedMedia as $key => $med) { ?>
+					<div class="carousel-item<?php echo !$key ? ' active' : '' ?>">
+						<img src="<?php echo wp_get_attachment_image_src($med)[0]; ?>" class="d-block w-100" alt="...">
+					</div>
+				<?php } ?>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<?php if (is_singular()) :
+			the_title('<h1 class="entry-title">', '</h1>');
 		else :
-		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php cami_post_thumbnail(); ?>
+	<?php
+	// cami_post_thumbnail();
+	?>
 
 	<div class="entry-content">
 		<?php

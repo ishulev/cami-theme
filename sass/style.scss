@@ -44,11 +44,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/utilities/text";
 @import "../node_modules/bootstrap/scss/transitions";
 @import "../node_modules/bootstrap/scss/navbar";
 @import "../node_modules/bootstrap/scss/nav";
 @import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/carousel";
 
 body {
 	font-family: 'Poppins', sans-serif;
